@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    
+    <script src="https://kit.fontawesome.com/f5fc345d60.js" crossorigin="anonymous"></script>
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+  
+    <!-- header section starts  -->
+
+    
+    <!--Admin panel starts-->
+  <div class="side-menu">
+      <div class="brand-name">
+          <a href="../index.html"><i class="fas fa-shopping-cart fa-2x"></i><span>Shop</span></a> 
+      </div>
+      <ul>
+          <li><a href="../adminpanel.html"><i class="fas fa-chart-line"></i>&nbsp; <span>Dashboard</span></a> </li>
+          <li class="active"><a href="new_product.html" style="color: #eb4d4b;"><i class="fas fa-book-reader"></i>&nbsp; <span>Add Product</span></a></li>
+          <li><a href="#"><i class="fas fa-chalkboard-teacher"></i>&nbsp; <span>Profit</span></a></li>
+          <li><a href="#"><i class="fas fa-school"></i>&nbsp; <span>Company</span></a></li>
+          <li><a href="#"><i class="fas fa-question-circle"></i>&nbsp; <span>Help</span></a></li>
+      </ul>
+  </div>
+
+  <div class="admin-container">
+      <div class="a-header">
+          <div class="a-nav">
+              <div class="user">
+                  <a href="new_product.html" class="a-btn">Add New</a>
+                  <a href="#"><i class="fas fa-bell fa-2x"></i></a>
+                  <a href="#"><i class="fas fa-user fa-2x"></i></a>
+              </div>
+          </div>  
+        </div>
+        <div class="a-content add_product" style="margin-top: 90px;">
+            <h3 class="text-center">Add new product</h3>
+            <form autocomplete="off" onsubmit="onFormSubmit()">
+                <div>
+                    <label for="productCode">Product Code</label>
+                    <input type="text" name="productCode" id="productCode">
+                </div>
+                <div>
+                    <label for="productCode">Product</label>
+                    <input type="text" name="product" id="product">
+                </div>
+                <div>
+                    <label for="quantity">Quantity</label>
+                    <input type="number" name="quantity" id="quantity">
+                </div>
+                <div>
+                    <label for="productCode">Price per piece</label>
+                    <input type="number" name="price" id="price">
+                </div>
+
+                <div class="form_action--button submit-container">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+            <table class="product-list" id="storeList">
+                <thead>
+                    <tr>
+                        <th>Product Code</th>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+  </div>
+
+ 
+<script src="../js/panel/add_product.js"></script>
+</body>
+</html>
